@@ -10,4 +10,6 @@ Abra o terminal e execute o seguinte comando: "git clone https://github.com/Bren
 
 Na parte de banco de dados, utilizei o MySQL versão 8.0.41, para acessar na sua máquina, mude a parte de appsetting.json para o correspondente do seu MySQL.
 
-Após isso, utilize o link "http://localhost:5238/swagger/index.html" para utilizar o Swagger
+Para rodar esse projeto, acesse o terminal do Visual Studio Code e utilize o caminho cd C#-DesafioFast\FastWorkshops, e escreva dotnet run, depois disso irá aparecer um link http com as informações, ex: http://localhost:5238.
+
+Após isso, utilize o link e coloque "/swagger" no final, por exemplo: "http://localhost:5238/swagger" para utilizar o Swagger
