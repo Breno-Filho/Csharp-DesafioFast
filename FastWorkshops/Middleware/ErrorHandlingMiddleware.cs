@@ -19,7 +19,7 @@ public class ErrorHandlingMiddleware
     {
         try
         {
-            await _next(context); // Chama o próximo middleware na pipeline
+            await _next(context); 
         }
         catch (Exception ex)
         {
@@ -29,14 +29,11 @@ public class ErrorHandlingMiddleware
 
     private Task HandleExceptionAsync(HttpContext context, Exception ex)
     {
-        // Logar a exceção (opcional)
         _logger.LogError(ex, "An unhandled exception has occurred: {Message}", ex.Message);
 
-        // Definir a resposta
         context.Response.ContentType = "application/json";
         context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
 
-        // Retornar uma resposta JSON
         var result = new
         {
             StatusCode = context.Response.StatusCode,
